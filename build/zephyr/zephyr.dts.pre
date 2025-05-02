@@ -979,6 +979,9 @@ zephyr_udc0: &usbd {
 
 &i2c1 {
     status="okay";
+    pinctrl-0 = <&i2c1_default>;
+    pinctrl-1 = <&i2c1_sleep>;
+    pinctrl-names = "default","sleep";
     compatible = "nordic,nrf-twi";
     clock-frequency = <400000>;
 
@@ -988,6 +991,22 @@ zephyr_udc0: &usbd {
         label="MCP3421";
     };
 
+};
+
+&pinctrl {
+ i2c1_default: i2c1_default {
+  group1 {
+   psels = <((((((0) * 32U) + (11)) & 0x7FU) << 0U) | ((11U & 0xFFFFU) << 16U))>, <((((((0) * 32U) + (12)) & 0x7FU) << 0U) | ((12U & 0xFFFFU) << 16U))>;
+   nordic,drive-mode = <6U>;
+  };
+ };
+ i2c1_sleep: i2c1_sleep {
+        group1 {
+            psels = <((((((0) * 32U) + (11)) & 0x7FU) << 0U) | ((11U & 0xFFFFU) << 16U))>, <((((((0) * 32U) + (12)) & 0x7FU) << 0U) | ((12U & 0xFFFFU) << 16U))>;
+            nordic,drive-mode = <6U>;
+            low-power-enable;
+        };
+    };
 };
 # 0 "<command-line>" 2
 # 1 "/home/abdullah/ncs/v2.5.0/zephyr/misc/empty_file.c"

@@ -135,14 +135,20 @@
 			status = "disabled";
 		};
 		i2c1: i2c@40004000 {
-			compatible = "i2c-device";
+			compatible = "nordic,nrf-twi";
 			#address-cells = < 0x1 >;
 			#size-cells = < 0x0 >;
 			reg = < 0x40004000 0x1000 >;
-			clock-frequency = < 0x186a0 >;
+			clock-frequency = < 0x61a80 >;
 			interrupts = < 0x4 0x1 >;
 			status = "okay";
-			mcp3421: mcp3421 {
+			pinctrl-0 = < &i2c1_default >;
+			pinctrl-1 = < &i2c1_sleep >;
+			pinctrl-names = "default", "sleep";
+			mcp3421: mcp3421@68 {
+				compatible = "i2c-device";
+				reg = < 0x68 >;
+				label = "MCP3421";
 			};
 		};
 		spi1: feather_spi: spi@40004000 {
@@ -194,7 +200,7 @@
 			max-bit-width = < 0x20 >;
 			interrupts = < 0x9 0x1 >;
 			prescaler = < 0x0 >;
-			phandle = < 0xa >;
+			phandle = < 0xc >;
 		};
 		timer2: timer@4000a000 {
 			compatible = "nordic,nrf-timer";
@@ -496,7 +502,7 @@
 			#gpio-cells = < 0x2 >;
 			status = "okay";
 			port = < 0x0 >;
-			phandle = < 0xb >;
+			phandle = < 0xd >;
 		};
 		gpio1: gpio@50000300 {
 			compatible = "nordic,nrf-gpio";
@@ -506,7 +512,7 @@
 			ngpios = < 0x10 >;
 			status = "okay";
 			port = < 0x1 >;
-			phandle = < 0xc >;
+			phandle = < 0xe >;
 		};
 		cryptocell: crypto@5002a000 {
 			compatible = "nordic,nrf-cc310";
@@ -550,28 +556,43 @@
 			};
 		};
 		spi1_default: spi1_default {
-			phandle = < 0x6 >;
+			phandle = < 0x8 >;
 			group1 {
 				psels = < 0x4000e >, < 0x5000d >, < 0x6000f >;
 			};
 		};
 		spi1_sleep: spi1_sleep {
-			phandle = < 0x7 >;
+			phandle = < 0x9 >;
 			group1 {
 				psels = < 0x4000e >, < 0x5000d >, < 0x6000f >;
 				low-power-enable;
 			};
 		};
 		qspi_default: qspi_default {
-			phandle = < 0x8 >;
+			phandle = < 0xa >;
 			group1 {
 				psels = < 0x1d0013 >, < 0x1f0011 >, < 0x200016 >, < 0x210017 >, < 0x220015 >, < 0x1e0014 >;
 			};
 		};
 		qspi_sleep: qspi_sleep {
-			phandle = < 0x9 >;
+			phandle = < 0xb >;
 			group1 {
 				psels = < 0x1d0013 >, < 0x1f0011 >, < 0x200016 >, < 0x210017 >, < 0x220015 >, < 0x1e0014 >;
+				low-power-enable;
+			};
+		};
+		i2c1_default: i2c1_default {
+			phandle = < 0x6 >;
+			group1 {
+				psels = < 0xb000b >, < 0xc000c >;
+				nordic,drive-mode = < 0x6 >;
+			};
+		};
+		i2c1_sleep: i2c1_sleep {
+			phandle = < 0x7 >;
+			group1 {
+				psels = < 0xb000b >, < 0xc000c >;
+				nordic,drive-mode = < 0x6 >;
 				low-power-enable;
 			};
 		};

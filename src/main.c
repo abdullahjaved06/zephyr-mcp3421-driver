@@ -30,7 +30,8 @@ int main(void)
             k_sleep(K_SECONDS(1));
             continue;
         }
-        
+        //Wait for conversion to complete (~266ms for 18-bit)
+        k_sleep(K_MSEC(300));
     }
     
    

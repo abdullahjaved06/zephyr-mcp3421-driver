@@ -24,6 +24,8 @@ int main(void)
     {
         int ret;
         uint8_t config = MCP3421_CONFIG_BYTE;
+        uint8_t buffer[4]; //3 bytes for ADC + 1 config byte
+        int32_t raw_adc=0;
         ret = i2c_write_dt(&mcp3421,config,1);
         if(ret<0) {
             LOG_ERR("Failed to write config byte: %d",ret);
@@ -32,6 +34,14 @@ int main(void)
         }
         //Wait for conversion to complete (~266ms for 18-bit)
         k_sleep(K_MSEC(300));
+        ret = i2c_read_dt(&mcp3421,buffer,4);
+         if (ret < 0) {
+            LOG_ERR("Failed to read ADC value: %d", ret);
+            k_sleep(K_SECONDS(1));
+            continue;
+        }
+        raw_adc = ((buffer[0]&0x03)<<16) | (buffer[1] <<8) | buffer[2];
+        
     }
     
    

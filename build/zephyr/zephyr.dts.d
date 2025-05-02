@@ -20,5 +20,4 @@ empty_file.o: /home/abdullah/ncs/v2.5.0/zephyr/misc/empty_file.c \
  /home/abdullah/ncs/v2.5.0/zephyr/dts/arm/nordic/override.dtsi \
  /home/abdullah/ncs/v2.5.0/zephyr/boards/arm/adafruit_feather_nrf52840/feather_connector.dtsi \
  /home/abdullah/ncs/v2.5.0/zephyr/boards/arm/adafruit_feather_nrf52840/adafruit_feather_nrf52840-pinctrl.dtsi \
- /home/abdullah/ncs/v2.5.0/zephyr/include/zephyr/dt-bindings/input/input-event-codes.h \
- /media/abdullah/Development/Abdullah/projects/Argus_pressure_version/mcp3421_testcode/adafruit_feather_nrf52840.overlay
+ /home/abdullah/ncs/v2.5.0/zephyr/include/zephyr/dt-bindings/input/input-event-codes.h

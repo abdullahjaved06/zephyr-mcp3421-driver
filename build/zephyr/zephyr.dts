@@ -135,13 +135,15 @@
 			status = "disabled";
 		};
 		i2c1: i2c@40004000 {
-			compatible = "nordic,nrf-twim";
+			compatible = "i2c-device";
 			#address-cells = < 0x1 >;
 			#size-cells = < 0x0 >;
 			reg = < 0x40004000 0x1000 >;
 			clock-frequency = < 0x186a0 >;
 			interrupts = < 0x4 0x1 >;
-			status = "disabled";
+			status = "okay";
+			mcp3421: mcp3421 {
+			};
 		};
 		spi1: feather_spi: spi@40004000 {
 			compatible = "nordic,nrf-spi";

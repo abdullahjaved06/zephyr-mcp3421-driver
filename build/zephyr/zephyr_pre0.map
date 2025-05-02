@@ -2680,7 +2680,7 @@ initlevel       0x0000000000004b44       0x58
                 0x0000000000004b64        0x8 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_nrfx.c.obj)
  .z_init_PRE_KERNEL_140_0_
                 0x0000000000004b6c        0x8 modules/nrf/drivers/hw_cc310/lib..__nrf__drivers__hw_cc310.a(hw_cc310.c.obj)
- .z_init_PRE_KERNEL_155_00077_
+ .z_init_PRE_KERNEL_155_00076_
                 0x0000000000004b74        0x8 zephyr/drivers/serial/libdrivers__serial.a(uart_nrfx_uart.c.obj)
  .z_init_PRE_KERNEL_160_0_
                 0x0000000000004b7c        0x8 zephyr/drivers/console/libdrivers__console.a(uart_console.c.obj)
@@ -2717,7 +2717,7 @@ device_area     0x0000000000004b9c       0x50
                 0x0000000000004bc4                __device_dts_ord_48
  ._device.static.1_55_
                 0x0000000000004bd8       0x14 zephyr/drivers/serial/libdrivers__serial.a(uart_nrfx_uart.c.obj)
-                0x0000000000004bd8                __device_dts_ord_77
+                0x0000000000004bd8                __device_dts_ord_76
                 0x0000000000004bec                _device_list_end = .
 
 sw_isr_table    0x0000000000004bec      0x180
@@ -2921,11 +2921,11 @@ rodata          0x0000000000004db0      0x320
                 0x0000000000004e68       0x24 zephyr/drivers/gpio/libdrivers__gpio.a(gpio_nrfx.c.obj)
  .rodata.uart_nrfx_uart0_config
                 0x0000000000004e8c        0x4 zephyr/drivers/serial/libdrivers__serial.a(uart_nrfx_uart.c.obj)
- .rodata.__pinctrl_dev_config__device_dts_ord_77
+ .rodata.__pinctrl_dev_config__device_dts_ord_76
                 0x0000000000004e90        0xc zephyr/drivers/serial/libdrivers__serial.a(uart_nrfx_uart.c.obj)
- .rodata.__pinctrl_states__device_dts_ord_77
+ .rodata.__pinctrl_states__device_dts_ord_76
                 0x0000000000004e9c        0x8 zephyr/drivers/serial/libdrivers__serial.a(uart_nrfx_uart.c.obj)
- .rodata.__pinctrl_state_pins_0__device_dts_ord_77
+ .rodata.__pinctrl_state_pins_0__device_dts_ord_76
                 0x0000000000004ea4        0x8 zephyr/drivers/serial/libdrivers__serial.a(uart_nrfx_uart.c.obj)
  .rodata.uart_nrfx_uart_driver_api
                 0x0000000000004eac       0x14 zephyr/drivers/serial/libdrivers__serial.a(uart_nrfx_uart.c.obj)

@@ -975,4 +975,19 @@ zephyr_udc0: &usbd {
  status = "okay";
 };
 # 0 "<command-line>" 2
+# 1 "/media/abdullah/Development/Abdullah/projects/Argus_pressure_version/mcp3421_testcode/adafruit_feather_nrf52840.overlay" 1
+
+&i2c1 {
+    status="okay";
+    compatible = "nordic,nrf-twi";
+    clock-frequency = <400000>;
+
+    mcp3421:mcp3421@68{
+        compatible="i2c-device";
+        reg=<0x68>;
+        label="MCP3421";
+    };
+
+};
+# 0 "<command-line>" 2
 # 1 "/home/abdullah/ncs/v2.5.0/zephyr/misc/empty_file.c"

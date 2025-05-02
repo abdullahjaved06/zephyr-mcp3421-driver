@@ -84,6 +84,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/media/abdullah/Development/Abdullah/projects/Argus_pressure_version/mcp3421_testcode/build/zephyr/drivers/i2c/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/media/abdullah/Development/Abdullah/projects/Argus_pressure_version/mcp3421_testcode/build/zephyr/drivers/pinctrl/cmake_install.cmake")
 endif()
 

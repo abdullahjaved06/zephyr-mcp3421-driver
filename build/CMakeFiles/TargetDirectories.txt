@@ -153,6 +153,9 @@
 /media/abdullah/Development/Abdullah/projects/Argus_pressure_version/mcp3421_testcode/build/zephyr/drivers/gpio/CMakeFiles/rebuild_cache.dir
 /media/abdullah/Development/Abdullah/projects/Argus_pressure_version/mcp3421_testcode/build/zephyr/drivers/gpio/CMakeFiles/edit_cache.dir
 /media/abdullah/Development/Abdullah/projects/Argus_pressure_version/mcp3421_testcode/build/zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir
+/media/abdullah/Development/Abdullah/projects/Argus_pressure_version/mcp3421_testcode/build/zephyr/drivers/i2c/CMakeFiles/rebuild_cache.dir
+/media/abdullah/Development/Abdullah/projects/Argus_pressure_version/mcp3421_testcode/build/zephyr/drivers/i2c/CMakeFiles/edit_cache.dir
+/media/abdullah/Development/Abdullah/projects/Argus_pressure_version/mcp3421_testcode/build/zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir
 /media/abdullah/Development/Abdullah/projects/Argus_pressure_version/mcp3421_testcode/build/zephyr/drivers/pinctrl/CMakeFiles/rebuild_cache.dir
 /media/abdullah/Development/Abdullah/projects/Argus_pressure_version/mcp3421_testcode/build/zephyr/drivers/pinctrl/CMakeFiles/edit_cache.dir
 /media/abdullah/Development/Abdullah/projects/Argus_pressure_version/mcp3421_testcode/build/zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir
